@@ -72,6 +72,10 @@ public class SeleniumUtils {
 		inputElement.clear();
 		inputElement.sendKeys(value);
 	}
+	public static void clearAndPopulateTextBox(WebElement inputElement,String value) {
+		inputElement.clear();
+		inputElement.sendKeys(value);
+	}
 
 	public static void checkRadio(WebDriver driver, By by) {
 		WebElement inputElement = driver.findElement(by);

@@ -27,7 +27,10 @@ dependencies {
 	compile group: 'org.seleniumhq.selenium', name: 'selenium-safari-driver', version: '2.53.0'
 	// http://mvnrepository.com/artifact/org.seleniumhq.selenium.fluent/fluent-selenium
 	compile group: 'org.seleniumhq.selenium.fluent', name: 'fluent-selenium', version: '1.16'
+	// http://mvnrepository.com/artifact/org.testng/testng
+	compile group: 'org.testng', name: 'testng', version: '6.9.10'
 
+	
 
 
 
