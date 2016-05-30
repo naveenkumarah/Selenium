@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
@@ -110,7 +111,10 @@ public class SeleniumUtils {
 		WebElement window = driver.switchTo().activeElement();
 		return window;
 	}
-
+	public static void waitForLoad(WebDriver driver) {
+	    new WebDriverWait(driver, 30).until((ExpectedCondition<Boolean>) wd ->
+	            ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+	}
 
 	public static WebElement findElement(WebDriver driver, By by, int timeoutInSeconds){
 	    try {

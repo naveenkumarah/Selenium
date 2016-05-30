@@ -31,17 +31,19 @@ public class LoginPageTest extends TestCase {
 	}
 
 	@Test(priority = 0)
-	public void digitarTexto() throws Exception {
+	public void linkedInTest() throws Exception {
 
 		String login = "";
 		String pass = "";
-		loginPage.login(login, pass);
+		HomePage homePage=loginPage.login(login, pass);
+		SeleniumUtils.waitForLoad(driver);
+		homePage.logout();
 		// SeleniumUtils.captureScreenshot(driver,
 		// "/apps/work/SpringWorkspace/Selenium/src/reports/", "screen");
 	}
 
 	@AfterClass
 	public void tearDown() throws Exception {
-		driver.quit();
+		//driver.quit();
 	}
 }
